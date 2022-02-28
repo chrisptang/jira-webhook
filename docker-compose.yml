@@ -1,0 +1,12 @@
+# ptang
+
+version: '3'
+
+services:
+  zookeeper:
+    image: chrisptang/jira-webhook:0.0.1
+    container_name: jira-webhook
+    ports:
+      - "8086:8086"
+    environment:
+      - WEBHOOK_URL=https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=dff6fcbc-3440-416a-932a-82189f9cdbf1
